@@ -5,25 +5,82 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
+    enum EstadoPlayer { Pausa, AndandoDer, AndandoIzq, Saltando, Sufriendo};
+    EstadoPlayer estado = EstadoPlayer.Pausa;
+
+
     [SerializeField] LayerMask floorLayer;
     [SerializeField] Transform posPies;
     [SerializeField] Text txtPuntuacion;
     [SerializeField] Text txtVidas;
     [SerializeField] float speed = 6;
     [SerializeField] float jumpForce = 1;
-    int vidasMaximas = 3;
+    int vidasMaximas = 5;
     [SerializeField] int vidas;
+    int saludMaxima = 100;
+    [SerializeField] int salud;
+    [SerializeField] Image barraDeVida;
+    float vida = 1;
+    
     [SerializeField] int puntos = 0;
     [SerializeField] float radioOverlap = 0.01f;
+    Animator playerAnimator;
     Rigidbody2D rb2D;
-    bool saltando = false;
 
-	void Start () {
-        rb2D = GetComponent<Rigidbody2D>();
-        txtPuntuacion.text = "Puntuacion:" + puntos;
-       // txtVidas.text = "Vidas:" + vidas;
+    public int fuerzaImpactoX = 2;
+    public int fuerzaImpactoY = 2;
+
+    private void Awake() {         
+            vidas = vidasMaximas;
+            salud = saludMaxima;
     }
-	
+
+    //ANTERIOR CODIGO
+    //bool saltando = false;
+    bool mirarFrente = true;
+
+    public void RecibirDanyo(int danyo) {
+
+        vida -= 0.2f;
+        barraDeVida.fillAmount = vida;
+
+        salud = salud - danyo;
+        if (salud <= 0) {
+            salud--;
+            salud = saludMaxima;
+            //Morir();            
+        }
+        if (estado==EstadoPlayer.AndandoDer) {
+            GetComponent<Rigidbody2D>().AddRelativeForce(
+            new Vector2(-fuerzaImpactoX, fuerzaImpactoY),
+            ForceMode2D.Impulse);
+        } else if (estado==EstadoPlayer.AndandoIzq) {
+            GetComponent<Rigidbody2D>().AddRelativeForce(
+            new Vector2(fuerzaImpactoX, fuerzaImpactoY),
+            ForceMode2D.Impulse);
+        }
+        estado = EstadoPlayer.Sufriendo;
+    }
+
+    void Start() {
+        rb2D = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
+        txtPuntuacion.text = "Puntuacion:" + puntos;
+        vidas = vidasMaximas;
+        salud = saludMaxima;
+        // txtVidas.text = "Vidas:" + vidas;
+    }
+
+    void CambiarOrientacion() {
+        print("Cambiar orientacion");
+        if (mirarFrente) {
+            transform.localScale = new Vector2(-1, 1);
+        } else {
+            transform.localScale = new Vector2(1, 1);
+        }
+        mirarFrente = !mirarFrente;
+    }
+
     private bool EstaEnElSuelo() {
         bool enSuelo = false;
         Collider2D colider = Physics2D.OverlapCircle(posPies.position, radioOverlap, floorLayer);
@@ -35,7 +92,10 @@ public class PlayerScript : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.S)) {
-            saltando = true;
+            estado = EstadoPlayer.Saltando;
+        }
+        if (estado==EstadoPlayer.Sufriendo && EstaEnElSuelo()) {
+            estado = EstadoPlayer.Pausa;
         }
     }
 
@@ -54,38 +114,58 @@ public class PlayerScript : MonoBehaviour {
     }
 	*/
 
-    void FixedUpdate () {
-        
-        float xPos = Input.GetAxis("Horizontal");        
-        
+    void FixedUpdate() {
+
+        float xPos = Input.GetAxis("Horizontal");
+                
         //PARA USAR FLECHAS
         //float yPos = Input.GetAxis("Vertical");
         float ySpeedActual = rb2D.velocity.y;
 
-        if (saltando) {
-            saltando = false;
+        if (estado == EstadoPlayer.Sufriendo) {
+            return;
+        }
+
+        if (Mathf.Abs(xPos) > 0.01f) {
+            playerAnimator.SetBool("Andando", true);
+        } else {
+            playerAnimator.SetBool("Andando", false);
+        }
+
+        if (estado == EstadoPlayer.Saltando) {
+            estado = EstadoPlayer.Pausa;
             if (EstaEnElSuelo()) {
                 rb2D.velocity = new Vector2(xPos * speed, jumpForce);
             } else {
                 rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
             }
-        } else {
+        } else if (xPos > 0.01f) {
             rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
+            estado = EstadoPlayer.AndandoDer;
+        } else if (xPos < -0.01f) {
+            rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
+            estado = EstadoPlayer.AndandoIzq;
         }
-        }
-              
 
-        //ESTO ES UTILIZADO CURSORES
-        /*if (yPos>0) {
-            if (EstaEnElSuelo()) {
-                rb2D.velocity = new Vector2(xPos * speed, jumpForce);
-            } else {
-                rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
-            }           
+        if (mirarFrente && xPos < -0.01) {
+            CambiarOrientacion();
+        } else if (!mirarFrente && xPos > 0.01) {
+            CambiarOrientacion();
+        }
+    }
+
+
+    //ESTO ES UTILIZADO CURSORES
+    /*if (yPos>0) {
+        if (EstaEnElSuelo()) {
+            rb2D.velocity = new Vector2(xPos * speed, jumpForce);
         } else {
             rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
-        }*/
-    
+        }           
+    } else {
+        rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
+    }*/
+
 
     public void incrementarPuntuacion(int puntosAIncrementar) {
         puntos = puntos + puntosAIncrementar;
@@ -120,29 +200,21 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-  /*  public void RecibirDanyo(int danyo) {
-
-        Debug.Log("RECIBIENDO DAÑO");
-
-        vidas = vidas - danyo;
-
-        if (vidas <= 0) {
-            vidas = 0;
-            Morir();
-        }
+    public int GetVidas() {
+        return this.vidas;
     }
 
- public void Morir() {
+   /*public void Morir() {
 
-        Debug.Log("ESTAS MUERTO JUGADOR!!");
-        audioBoom.Play();
-        ParticleSystem ps = Instantiate(prefabExplosion, generadorMuerte.transform.position, generadorMuerte.transform.rotation);
-        ps.Play();
-        estaVivo = false;
-        Invoke("MostrarGameOver", 5);
-    }
+          Debug.Log("ESTAS MUERTO JUGADOR!!");
+          //audioBoom.Play();
+          //ParticleSystem ps = Instantiate(prefabExplosion, generadorMuerte.transform.position, generadorMuerte.transform.rotation);
+          //ps.Play();
+          //estaVivo = false;
+          Invoke("MostrarGameOver", 5);
+      }
 
-    private void MostrarGameOver() {
-        SceneManager.LoadScene(2);
-    }*/
+      private void MostrarGameOver() {
+          SceneManager.LoadScene(2);
+      }*/
 }

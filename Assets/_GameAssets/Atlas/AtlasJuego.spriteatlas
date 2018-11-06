@@ -14,7 +14,7 @@ SpriteAtlas:
       maxTextureSize: 2048
       textureCompression: 0
       filterMode: 1
-      generateMipMaps: 0
+      generateMipMaps: 1
       readable: 0
       crunchedCompression: 0
       sRGB: 1
@@ -35,14 +35,25 @@ SpriteAtlas:
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 28c261685a072024c8d6693c71739912, type: 3}
   - {fileID: 21300000, guid: 0e3ba5148dd675a48808c172f6f93a9d, type: 3}
-  - {fileID: 21300000, guid: 6f8e4a09e247d5440af27da4aa946384, type: 3}
+  - {fileID: 21300000, guid: 28c261685a072024c8d6693c71739912, type: 3}
   - {fileID: 21300000, guid: c007b640d2b0b5b40a1233d3929dc0d0, type: 3}
   - {fileID: 21300000, guid: 206803fdc40c04c4495e081081d9c33c, type: 3}
   - {fileID: 21300000, guid: 8e598b0071c620d40ae1fe58b3e45576, type: 3}
   - {fileID: 21300000, guid: 7e58c0b92e978924db5d18eaa31a2496, type: 3}
+  - {fileID: 21300000, guid: 6f8e4a09e247d5440af27da4aa946384, type: 3}
+  - {fileID: 21300000, guid: 38613d6b75a7c8640911009d07d3c00b, type: 3}
+  - {fileID: 21300000, guid: 476115a1bde83f947afd8560075ac2d9, type: 3}
+  - {fileID: 21300000, guid: 8d0c7169019de1c418664d4f8eabc3c8, type: 3}
+  - {fileID: 21300000, guid: 45d2a1cb1ab931947a128e46051d2144, type: 3}
+  - {fileID: 21300000, guid: e00f2a9218c231540942d22ac3387c34, type: 3}
+  - {fileID: 21300000, guid: 7e27e228584ec184ba134a97e1e924aa, type: 3}
   - {fileID: 21300000, guid: 6fa34a7593ea7c14598e8c6b84dc2d83, type: 3}
+  - {fileID: 21300000, guid: 2261966adbde7cd45a48932c9a501d1d, type: 3}
+  - {fileID: 21300000, guid: 8ce11b3519e851b48b82c0166514ba86, type: 3}
+  - {fileID: 21300000, guid: ff6eabd3d0ed4a1459fa6eb5f1c8759f, type: 3}
+  - {fileID: 21300000, guid: 18dd2a504568fe540b573eab5ca0abc7, type: 3}
+  - {fileID: 21300000, guid: 55e761f82b85a0f4a8ea6d13d6d8fd46, type: 3}
   - {fileID: 21300000, guid: 1047f5d1bee66314aa6a61684e15a593, type: 3}
   - {fileID: 21300000, guid: 88cddfd294d21ef4cab20310c88b65da, type: 3}
   - {fileID: 21300000, guid: 35a16cd371240c74b99745cf60a3c81a, type: 3}
@@ -83,6 +94,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a009036297e104a48a5ba5cc12faf039, type: 3}
   - {fileID: 21300000, guid: d8d3bf780f40c3c469ab10922c547c95, type: 3}
   - {fileID: 21300000, guid: 9d34a8a56c714d74abba54d852abea3c, type: 3}
+  - {fileID: 21300000, guid: 5ffff18a78ac1ff4286694ea4600b133, type: 3}
+  - {fileID: 21300000, guid: 78159ffe64d4ef04c827cef0fa7419aa, type: 3}
   - {fileID: 21300000, guid: e88b4374a8970fb48868101ca63cd893, type: 3}
   - {fileID: 21300000, guid: 1bd8086f62272b74db47ea26721fb7b5, type: 3}
   - {fileID: 21300000, guid: 44b011efe2b2655438e4655f6f869de1, type: 3}
@@ -118,14 +131,25 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bdb07184442924d4fbe4c61295686ce0, type: 3}
   - {fileID: 21300000, guid: 68e7a235dea24c64c80a2083987ccb71, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Gem_Giddy
   - fondo_terrorifico
-  - pixel-heart-retro
+  - Gem_Giddy
   - pixel-heart
   - preview-old-dark-castle-interior-tileset
   - platform
   - rockGrass
+  - pixel-heart-retro
+  - p2_walk08
+  - p2_walk09
+  - p2_walk12
+  - p2_walk10
+  - p2_walk11
+  - p2_walk07
   - p2_walk01
+  - p2_walk02
+  - p2_walk06
+  - p2_walk05
+  - p2_walk03
+  - p2_walk04
   - boxItemAlt_disabled
   - grassLeft
   - grassCliffRightAlt
@@ -166,6 +190,8 @@ SpriteAtlas:
   - grassHalf
   - grassHalfLeft
   - grassHalfMid
+  - flyFly1
+  - flyFly2
   - windowHighLeadlightTop
   - tochLit
   - tochLit2
