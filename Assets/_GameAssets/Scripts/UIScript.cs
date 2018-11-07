@@ -22,4 +22,10 @@ public class UIScript : MonoBehaviour {
         }
     }
 
+    private void Update() {
+        numeroVidas = pls.GetVidas();
+        for (int i = numeroVidas; i < imagenesVida.Length; i++) {
+            imagenesVida[i].color = new Color32(160, 160, 160, 128);
+        }
+    }
 }

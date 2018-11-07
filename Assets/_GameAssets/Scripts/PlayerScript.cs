@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] int salud;
     [SerializeField] Image barraDeVida;
     float vida = 1;
+    [SerializeField] UIScript uiScript;
     
     [SerializeField] int puntos = 0;
     [SerializeField] float radioOverlap = 0.01f;
@@ -46,7 +47,8 @@ public class PlayerScript : MonoBehaviour {
 
         salud = salud - danyo;
         if (salud <= 0) {
-            salud--;
+            vidas--;
+            uiScript.RestarVida();
             salud = saludMaxima;
             //Morir();            
         }
