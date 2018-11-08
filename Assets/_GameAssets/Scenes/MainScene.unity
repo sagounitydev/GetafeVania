@@ -662,6 +662,7 @@ MonoBehaviour:
   vidas: 0
   salud: 0
   barraDeVida: {fileID: 1320911277}
+  uiScript: {fileID: 802669472}
   puntos: 0
   radioOverlap: 0.01
   fuerzaImpactoX: 2
@@ -2259,7 +2260,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -6, z: 0}
-  m_Size: {x: 45, y: 10, z: 1}
+  m_Size: {x: 45, y: 23, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2426,62 +2427,6 @@ CompositeCollider2D:
         Y: -30000000
       - X: 30000000
         Y: -30000000
-    - - X: 120000000
-        Y: -29000000
-      - X: 120000000
-        Y: -20000000
-      - X: 110000000
-        Y: -20000000
-      - X: 110000000
-        Y: -19714286
-      - X: 100285712
-        Y: -10000000
-      - X: 100000000
-        Y: -10000000
-      - X: 100000000
-        Y: -9714286
-      - X: 90285712
-        Y: 0
-      - X: 90000000
-        Y: 0
-      - X: 90000000
-        Y: 285714
-      - X: 80285720
-        Y: 10000000
-      - X: 70428568
-        Y: 10000000
-      - X: 70000000
-        Y: 9571428
-      - X: 70000000
-        Y: 6285714
-      - X: 76428568
-        Y: 0
-      - X: 80428568
-        Y: 0
-      - X: 80000000
-        Y: -428571
-      - X: 80000000
-        Y: -3714285
-      - X: 86428576
-        Y: -10000000
-      - X: 90428568
-        Y: -10000000
-      - X: 90000000
-        Y: -10428572
-      - X: 90000000
-        Y: -13714286
-      - X: 96428576
-        Y: -20000000
-      - X: 90285712
-        Y: -20000000
-      - X: 90000000
-        Y: -20142858
-      - X: 90000000
-        Y: -27142856
-      - X: 94714288
-        Y: -30000000
-      - X: 119857136
-        Y: -30000000
     - - X: 170000000
         Y: -20000000
       - X: 179857136
@@ -2538,6 +2483,62 @@ CompositeCollider2D:
         Y: -50000000
       - X: 170000000
         Y: -50000000
+    - - X: 120000000
+        Y: -29000000
+      - X: 120000000
+        Y: -20000000
+      - X: 110000000
+        Y: -20000000
+      - X: 110000000
+        Y: -19714286
+      - X: 100285712
+        Y: -10000000
+      - X: 100000000
+        Y: -10000000
+      - X: 100000000
+        Y: -9714286
+      - X: 90285712
+        Y: 0
+      - X: 90000000
+        Y: 0
+      - X: 90000000
+        Y: 285714
+      - X: 80285720
+        Y: 10000000
+      - X: 70428568
+        Y: 10000000
+      - X: 70000000
+        Y: 9571428
+      - X: 70000000
+        Y: 6285714
+      - X: 76428568
+        Y: 0
+      - X: 80428568
+        Y: 0
+      - X: 80000000
+        Y: -428571
+      - X: 80000000
+        Y: -3714285
+      - X: 86428576
+        Y: -10000000
+      - X: 90428568
+        Y: -10000000
+      - X: 90000000
+        Y: -10428572
+      - X: 90000000
+        Y: -13714286
+      - X: 96428576
+        Y: -20000000
+      - X: 90285712
+        Y: -20000000
+      - X: 90000000
+        Y: -20142858
+      - X: 90000000
+        Y: -27142856
+      - X: 94714288
+        Y: -30000000
+      - X: 119857136
+        Y: -30000000
     - - X: 0
         Y: -29000000
       - X: 0
@@ -2618,34 +2619,6 @@ CompositeCollider2D:
       - {x: 1, y: -1}
       - {x: 1, y: -3}
       - {x: 3, y: -3}
-    - - {x: 12, y: -2.9}
-      - {x: 12, y: -2}
-      - {x: 11, y: -2}
-      - {x: 11, y: -1.9714286}
-      - {x: 10.028571, y: -1}
-      - {x: 10, y: -1}
-      - {x: 10, y: -0.97142863}
-      - {x: 9.028571, y: 0}
-      - {x: 9, y: 0}
-      - {x: 9, y: 0.0285714}
-      - {x: 8.028572, y: 1}
-      - {x: 7.0428567, y: 1}
-      - {x: 7, y: 0.95714283}
-      - {x: 7, y: 0.6285714}
-      - {x: 7.642857, y: 0}
-      - {x: 8.042857, y: 0}
-      - {x: 8, y: -0.0428571}
-      - {x: 8, y: -0.3714285}
-      - {x: 8.642858, y: -1}
-      - {x: 9.042857, y: -1}
-      - {x: 9, y: -1.0428572}
-      - {x: 9, y: -1.3714286}
-      - {x: 9.642858, y: -2}
-      - {x: 9.028571, y: -2}
-      - {x: 9, y: -2.0142858}
-      - {x: 9, y: -2.7142856}
-      - {x: 9.471429, y: -3}
-      - {x: 11.985714, y: -3}
     - - {x: 17, y: -2}
       - {x: 17.985714, y: -2}
       - {x: 18, y: -1.9}
@@ -2674,6 +2647,34 @@ CompositeCollider2D:
       - {x: 13, y: -2}
       - {x: 13, y: -5}
       - {x: 17, y: -5}
+    - - {x: 12, y: -2.9}
+      - {x: 12, y: -2}
+      - {x: 11, y: -2}
+      - {x: 11, y: -1.9714286}
+      - {x: 10.028571, y: -1}
+      - {x: 10, y: -1}
+      - {x: 10, y: -0.97142863}
+      - {x: 9.028571, y: 0}
+      - {x: 9, y: 0}
+      - {x: 9, y: 0.0285714}
+      - {x: 8.028572, y: 1}
+      - {x: 7.0428567, y: 1}
+      - {x: 7, y: 0.95714283}
+      - {x: 7, y: 0.6285714}
+      - {x: 7.642857, y: 0}
+      - {x: 8.042857, y: 0}
+      - {x: 8, y: -0.0428571}
+      - {x: 8, y: -0.3714285}
+      - {x: 8.642858, y: -1}
+      - {x: 9.042857, y: -1}
+      - {x: 9, y: -1.0428572}
+      - {x: 9, y: -1.3714286}
+      - {x: 9.642858, y: -2}
+      - {x: 9.028571, y: -2}
+      - {x: 9, y: -2.0142858}
+      - {x: 9, y: -2.7142856}
+      - {x: 9.471429, y: -3}
+      - {x: 11.985714, y: -3}
     - - {x: 0, y: -2.9}
       - {x: 0, y: -2}
       - {x: -5.9714284, y: -2}
@@ -3764,7 +3765,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1605731158
+  randomSeed: -992427371
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7977,6 +7978,31 @@ Prefab:
       propertyPath: m_Name
       value: ObjMosca (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
   m_IsPrefabParent: 0
@@ -8267,6 +8293,31 @@ Prefab:
     - target: {fileID: 1778027823289984, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
       propertyPath: m_Name
       value: ObjMosca (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
@@ -9872,6 +9923,31 @@ Prefab:
       propertyPath: m_Name
       value: ObjMosca (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
   m_IsPrefabParent: 0
@@ -10293,6 +10369,31 @@ Prefab:
     - target: {fileID: 1778027823289984, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
       propertyPath: m_Name
       value: ObjMosca (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
@@ -10735,6 +10836,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
   m_IsPrefabParent: 0
@@ -10908,6 +11034,31 @@ Prefab:
     - target: {fileID: 1778027823289984, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
       propertyPath: m_Name
       value: ObjMosca (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224700181005784176, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224204078857258284, guid: 08802384c6e74454da45edf3f80332ce,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08802384c6e74454da45edf3f80332ce, type: 2}
