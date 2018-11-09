@@ -196,7 +196,7 @@ public class PlayerScript : MonoBehaviour {
 
         salud = Mathf.Min(salud, saludMaxima);
 
-        txtVidas.text = "Vidas: " + salud.ToString();
+        txtVidas.text = "Vidas:" + salud.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
