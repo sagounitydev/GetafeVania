@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4777531988815248}
   - component: {fileID: 212542299120062184}
   - component: {fileID: 61023198906390432}
+  - component: {fileID: 114972977975527188}
   m_Layer: 0
   m_Name: Vida
   m_TagString: Vida
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53806496, y: 0.4595003}
   m_EdgeRadius: 0
+--- !u!114 &114972977975527188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123264825391364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8877f9d1f5e6a3e44a703926d84d53a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: 50
 --- !u!212 &212542299120062184
 SpriteRenderer:
   m_ObjectHideFlags: 1

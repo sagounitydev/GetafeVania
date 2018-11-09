@@ -70,6 +70,10 @@ public class PlayerScript : MonoBehaviour {
         txtPuntuacion.text = "Puntuacion:" + puntos;
         vidas = vidasMaximas;
         salud = saludMaxima;
+        Vector2 position = GameController.GetPosition();
+        if (position != Vector2.zero) {
+            this.transform.position = position;
+        }
         // txtVidas.text = "Vidas:" + vidas;
     }
 
@@ -185,6 +189,14 @@ public class PlayerScript : MonoBehaviour {
         vidas = vidas - vidasARestar;
         txtVidas.text = "Vidas:" + vidas;
 
+    }
+
+    public void RecibirSalud(int incrementoSalud) {
+        salud = salud + incrementoSalud;
+
+        salud = Mathf.Min(salud, saludMaxima);
+
+        txtVidas.text = "Vidas: " + salud.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
